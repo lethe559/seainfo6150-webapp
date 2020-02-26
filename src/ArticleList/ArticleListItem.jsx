@@ -1,16 +1,20 @@
 import React from "react";
-import styles from "./ArticleListItem.module.css";
 import SlugButton from "./SlugButton";
+import ArticleImage from "./ArticleImage.jsx";
+import styles from "./ArticleListItem.module.css";
 
-const ArticleListItem = props => {
-  return (
-    <div className={styles.container}>
-      <h3 className={styles.title}>{props.article.title}</h3>
-      <p>{props.article.shortText}</p>
-      <time className={styles.pubDate} dateTime={props.article.pubYear}>{props.article.pubDate}</time>
-      <SlugButton slug={props.article.slug} buttonText={props.article.author} />
-    </div>
-  );
-};
+const ArticleListItem = ({article}) => {
+	return (
+		<section className={styles.section}>
+			<ArticleImage className={styles.image} url={article.image._url} title={article.title}/>
+			<h2 className={styles.header}>{article.title}</h2>
+			<p className={styles.start}>
+				{article.shortText}
+				<time className={styles.info}>{article.pubDate}</time>
+			</p>			
+			<SlugButton buttonText = {article.author} slug = {article.slug}/>
+		</section>
+	);
+}
 
 export default ArticleListItem;

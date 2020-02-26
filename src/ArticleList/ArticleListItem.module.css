@@ -1,18 +1,31 @@
-.container {
-    background: #eee;
-    border: 1px solid #c00;
-    margin-bottom: 20px;
-    padding: 10px;
-    position: relative;
+.header {
+	color: red;
+	font-weight: bold;
+	font-size: 25px;
+	height: 15%;
 }
 
-.title {
-    color: #c00;
-    font-size: 2rem;
-    margin: .5rem 0;
+.start {
+	height: 40%;
+	margin: 0;
 }
 
-.pubDate {
-    font-weight: bold;
-    font-size: smaller;
+.info {
+	display: flex;
+	justify-content: space-between;
+	height: 10%;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.section {
+	background-image: linear-gradient(to right, #E57373, white 20%);
+	list-style: none;
+	border: 1px solid red;
+	margin: 20px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	height: 90%;
 }
